@@ -1,5 +1,7 @@
 lane :test do
+  touch(path: "test.rb")
   copy_files(source: "test.rb", destination: "lib")
   remove_files(path: "test.rb")
   rename_file(source: "lib/test.rb", destination: "lib/test2.rb")
+  remove_files(path: "lib/test2.rb")
 end
