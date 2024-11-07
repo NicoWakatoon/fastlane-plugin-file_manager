@@ -2,13 +2,13 @@ require "fastlane/action"
 
 module Fastlane
   module Actions
-    class CopyFilesAction < Action
+    class RenameFileAction < Action
       def self.run(params)
         Actions.sh("mv", params[:source], params[:destination])
       end
 
       def self.description
-        "Copy files"
+        "Rename file"
       end
 
       def self.authors
